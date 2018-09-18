@@ -1,0 +1,14 @@
+syntax: glob
+.DS_Store
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.unitypackage
+
+syntax: regexp
+^Build/.*
+^Library/.*
+^Temp/.*
+
+#Source: https://gist.github.com/MatthewMaker/3931806
