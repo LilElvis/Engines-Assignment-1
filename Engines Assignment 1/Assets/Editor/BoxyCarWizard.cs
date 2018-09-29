@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿//The following script was used from a free to use starter project found here: https://twitter.com/AnthonyYakovlev/status/585060413370400768
+//The free to use project is now officially available on the asset store here: https://assetstore.unity.com/packages/essentials/tutorial-projects/vehicle-tools-83660
+
+using UnityEngine;
 using UnityEditor;
 using System.Collections;
 
