@@ -11,7 +11,8 @@ public class EventRelay : MonoBehaviour
     {
         Finish,
         TipOver,
-        Reset
+        Reset,
+        SwapControls
     }
 
     public static string RelayEvent(EventMessageType messageType, MonoBehaviour sender)

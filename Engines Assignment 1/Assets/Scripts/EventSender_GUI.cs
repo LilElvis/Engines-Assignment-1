@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventSender_GUI : MonoBehaviour
 {
     public bool resetClicked = false;
+    public bool swapClicked = false;
 
     void Update()
     {
@@ -14,10 +15,22 @@ public class EventSender_GUI : MonoBehaviour
             Debug.Log("Reset Event was seen by: " + value);
             resetClicked = false;
         }
+
+        if (swapClicked)
+        {
+            string value = EventRelay.RelayEvent(EventRelay.EventMessageType.SwapControls, this);
+            Debug.Log("SwapControls Event was seen by: " + value);
+            swapClicked = false;
+        }
     }
 
-    public void OnButtonClick()
+    public void OnResetButtonClick()
     {
         resetClicked = true;
+    }
+
+    public void OnSwapButtonClick()
+    {
+        swapClicked = true;
     }
 }
