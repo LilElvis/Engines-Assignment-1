@@ -35,10 +35,13 @@ public class RearWheelDrive : MonoBehaviour {
 	// this helps us to figure our which wheels are front ones and which are rear
 	public void Update()
 	{
-		float angle = maxAngle * Input.GetAxis("Horizontal");
-		float torque = maxTorque * Input.GetAxis("Vertical");
+        //float angle = maxAngle * Input.GetAxis("Horizontal");
+        //float torque = maxTorque * Input.GetAxis("Vertical");
 
-		foreach (WheelCollider wheel in wheels)
+        float angle = maxAngle * Command.X_Axis;
+        float torque = maxTorque * Command.Y_Axis;
+
+        foreach (WheelCollider wheel in wheels)
 		{
 			// a simple car where front wheels steer while rear ones drive
 			if (wheel.transform.localPosition.z > 0)
