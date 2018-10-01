@@ -11,6 +11,7 @@ public class Bullet : MonoBehaviour
     void Start ()
     {
         Mesh mesh = GetComponent<MeshFilter>().sharedMesh;
+        //Mesh mesh = new Mesh(); //THE BAD WAY
         Vector3[] vertices = mesh.vertices;
         int p = 0;
         while(p < vertices.Length)
