@@ -8,15 +8,15 @@ public class InputHandler : MonoBehaviour
     static public Increase_Y_Axis IncreaseY = new Increase_Y_Axis();
     static public Decrease_X_Axis DecreaseX = new Decrease_X_Axis();
     static public Decrease_Y_Axis DecreaseY = new Decrease_Y_Axis();
+    static public Unassign Unassign_Axis = new Unassign();
     static public Command buttonW = IncreaseY;
     static public Command buttonS = DecreaseY;
     static public Command buttonA = DecreaseX;
     static public Command buttonD = IncreaseX;
-    static public Command buttonUP = null;
-    static public Command buttonDOWN = null;
-    static public Command buttonLEFT = null;
-    static public Command buttonRIGHT = null;
-
+    static public Command buttonUP = Unassign_Axis;
+    static public Command buttonDOWN = Unassign_Axis;
+    static public Command buttonLEFT = Unassign_Axis;
+    static public Command buttonRIGHT = Unassign_Axis;
     public void handleInput()
     {
         if (Input.GetButton("W")) buttonW.execute();
