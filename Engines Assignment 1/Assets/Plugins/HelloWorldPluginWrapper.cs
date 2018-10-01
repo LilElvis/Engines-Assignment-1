@@ -31,7 +31,7 @@ public class HelloWorldPluginWrapper : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            SetGreeting("Goodbye!");
+            SetGreeting("Thanks for playing!");
 
             string message = Marshal.PtrToStringAnsi(SayHello());
             print(message);
