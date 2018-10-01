@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class InputHandler : MonoBehaviour
 {
-    static public Command buttonW = new Increase_Y_Axis();
-    static public Command buttonS = new Decrease_Y_Axis();
-    static public Command buttonA = new Decrease_X_Axis();
-    static public Command buttonD = new Increase_X_Axis();
-    static public Command buttonUP;
-    static public Command buttonDOWN;
-    static public Command buttonLEFT;
-    static public Command buttonRIGHT;
+    static public Increase_X_Axis IncreaseX = new Increase_X_Axis();
+    static public Increase_Y_Axis IncreaseY = new Increase_Y_Axis();
+    static public Decrease_X_Axis DecreaseX = new Decrease_X_Axis();
+    static public Decrease_Y_Axis DecreaseY = new Decrease_Y_Axis();
+    static public Command buttonW = IncreaseY;
+    static public Command buttonS = DecreaseY;
+    static public Command buttonA = DecreaseX;
+    static public Command buttonD = IncreaseX;
+    static public Command buttonUP = null;
+    static public Command buttonDOWN = null;
+    static public Command buttonLEFT = null;
+    static public Command buttonRIGHT = null;
 
     public void handleInput()
     {
@@ -23,6 +27,18 @@ public class InputHandler : MonoBehaviour
         if (Input.GetButton("DOWN")) buttonDOWN.execute();
         if (Input.GetButton("LEFT")) buttonLEFT.execute();
         if (Input.GetButton("RIGHT")) buttonRIGHT.execute();
+
+        if(!Input.anyKey)
+        {
+            buttonW.undo();
+            buttonS.undo();
+            buttonA.undo();
+            buttonD.undo();
+            buttonUP.undo();
+            buttonDOWN.undo();
+            buttonLEFT.undo();
+            buttonRIGHT.undo();   
+        }
     }
 
     public void Update()

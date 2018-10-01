@@ -20,16 +20,16 @@ public class EventListener_InputHandler : MonoBehaviour
 
     string HandleEvent(EventRelay.EventMessageType messageType, MonoBehaviour sender)
     {
-        if(messageType == EventRelay.EventMessageType.SwapControls)
+        if (messageType == EventRelay.EventMessageType.SwapControls)
         {
             wasd = !wasd;
 
-            if(wasd)
+            if (wasd)
             {
-                InputHandler.buttonW = new Increase_Y_Axis();
-                InputHandler.buttonS = new Decrease_Y_Axis();
-                InputHandler.buttonA = new Decrease_X_Axis();
-                InputHandler.buttonD = new Increase_X_Axis();
+                InputHandler.buttonW = InputHandler.IncreaseY;
+                InputHandler.buttonS = InputHandler.DecreaseY;
+                InputHandler.buttonA = InputHandler.DecreaseX;
+                InputHandler.buttonD = InputHandler.IncreaseX;
                 InputHandler.buttonUP = null;
                 InputHandler.buttonDOWN = null;
                 InputHandler.buttonLEFT = null;
@@ -41,10 +41,10 @@ public class EventListener_InputHandler : MonoBehaviour
                 InputHandler.buttonS = null;
                 InputHandler.buttonA = null;
                 InputHandler.buttonD = null;
-                InputHandler.buttonUP = new Increase_Y_Axis();
-                InputHandler.buttonDOWN = new Decrease_Y_Axis();
-                InputHandler.buttonLEFT = new Decrease_X_Axis();
-                InputHandler.buttonRIGHT = new Increase_X_Axis();
+                InputHandler.buttonUP = InputHandler.IncreaseY;
+                InputHandler.buttonDOWN = InputHandler.DecreaseY;
+                InputHandler.buttonLEFT = InputHandler.DecreaseX;
+                InputHandler.buttonRIGHT = InputHandler.IncreaseX;
             }
         }
 
