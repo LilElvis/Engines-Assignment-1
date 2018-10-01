@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//The Bullet class's logic for taking on a shared mesh mirrors the Unity documentation found here: https://docs.unity3d.com/2017.3/Documentation/ScriptReference/MeshFilter-sharedMesh.html
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

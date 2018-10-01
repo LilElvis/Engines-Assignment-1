@@ -21,7 +21,7 @@ public class EventListener_Player : MonoBehaviour
 
     void Start()
     {
-        startPosition.Set(0.0f, 1.0f, 0.0f);
+        startPosition.Set(0.0f, 1.71f, -73.0f);
         startRotation.Set(0.0f, 0.0f, 0.0f, 0.0f);
     }
 

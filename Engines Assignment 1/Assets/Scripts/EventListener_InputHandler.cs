@@ -30,17 +30,17 @@ public class EventListener_InputHandler : MonoBehaviour
                 InputHandler.buttonS = InputHandler.DecreaseY;
                 InputHandler.buttonA = InputHandler.DecreaseX;
                 InputHandler.buttonD = InputHandler.IncreaseX;
-                InputHandler.buttonUP = null;
-                InputHandler.buttonDOWN = null;
-                InputHandler.buttonLEFT = null;
-                InputHandler.buttonRIGHT = null;
+                InputHandler.buttonUP = InputHandler.Unassign_Axis;
+                InputHandler.buttonDOWN = InputHandler.Unassign_Axis;
+                InputHandler.buttonLEFT = InputHandler.Unassign_Axis;
+                InputHandler.buttonRIGHT = InputHandler.Unassign_Axis;
             }
             else
             {
-                InputHandler.buttonW = null;
-                InputHandler.buttonS = null;
-                InputHandler.buttonA = null;
-                InputHandler.buttonD = null;
+                InputHandler.buttonW = InputHandler.Unassign_Axis;
+                InputHandler.buttonS = InputHandler.Unassign_Axis;
+                InputHandler.buttonA = InputHandler.Unassign_Axis;
+                InputHandler.buttonD = InputHandler.Unassign_Axis;
                 InputHandler.buttonUP = InputHandler.IncreaseY;
                 InputHandler.buttonDOWN = InputHandler.DecreaseY;
                 InputHandler.buttonLEFT = InputHandler.DecreaseX;
