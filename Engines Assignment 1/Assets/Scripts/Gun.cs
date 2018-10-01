@@ -17,7 +17,7 @@ public class Gun : MonoBehaviour
 	
 	void Update ()
     {
-        if(Input.GetButtonDown("Space"))
+        if(Input.GetButton("Space"))
         {
             Fire();
         }
