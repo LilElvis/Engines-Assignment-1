@@ -1,0 +1,140 @@
+Pseudocode Command Design Pattern
+
+ABSTRACT CLASS Command
+{
+	void Execute 
+	void Undo
+	
+	
+	float X-Axis is 0
+	float Y-Axis is 0
+}
+
+
+CLASS InputHandler
+	
+	IncreaseY is new Y-Axis Increase
+	DecreaseY is new Y-Axis Decrease
+	DecreaseX is new X-Axis Decrease
+	IncreaseX is new X-Axis Increase
+	UnassignAxis is new Unassign
+	
+	Command "W"-key is IncreaseY
+	Command "S"-key is DecreaseY
+	Command "A"-key is  DecreaseX
+	Command "D"-key is  IncreaseX
+	Command UP is UnassignAxis
+	Command DOWN is UnassignAxis
+	Command LEFT is UnassignAxis
+	Command RIGHT is UnassignAxis
+	
+		handleInputs
+			
+			if "W"-key is pressed, execute "W"-key
+			if "S"-key is pressed, execute "S"-key
+			if "A"-key is pressed, execute "A"-key
+			if "D"-key is pressed, execute "D"-key
+			if UP is pressed, execute UP
+			if DOWN is pressed, execute DOWN
+			if LEFT is pressed, execute LEFT
+			if RIGHT is pressed, execute RIGHT
+			
+			if any key
+			{
+				undo "W"-key
+				undo "S"-key
+				undo "A"-key
+				undo "D"-key
+				undo UP
+				undo DOWN
+				undo LEFT
+				undo RIGHT
+			}	
+		
+		Update
+		{
+			handleInputs
+		}
+
+CLASS IncreaseY : Command 
+
+			void Execute
+			{
+				Y-Axis += 0.1
+				if Y-Axis is greater than 1
+					Y-Axis = 1
+			}
+			
+			void undo
+			{
+				Y-Axis -= 0.1
+				if Y-Axis is less than 0
+					Y-Axis = 0
+			}
+			
+CLASS IncreaseX : Command 
+
+			void Execute
+			{
+				X-Axis += 0.1
+				if X-Axis is greater than 1
+					X-Axis = 1
+			}
+			
+			void undo
+			{
+				X-Axis -= 0.1
+				if X-Axis is less than 0
+					X-Axis = 0
+			}
+			
+CLASS DecreaseY : Command 
+
+			void Execute
+			{
+				Y-Axis -= 0.1
+				if Y-Axis is less than -1
+					Y-Axis = -1
+			}
+			
+			void undo
+			{
+				Y-Axis += 0.1
+				if Y-Axis is greater than 0
+					Y-Axis = 0
+			}
+			
+CLASS DecreaseX : Command 
+
+			void Execute
+			{
+				X-Axis -= 0.1
+				if X-Axis is less than -1
+					X-Axis = -1
+			}
+			
+			void undo
+			{
+				X-Axis += 0.1
+				if X-Axis is greater than 0
+					X-Axis = 0
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
